@@ -1,0 +1,25 @@
+{
+  "name": "strobofm.herokuapp.com",
+  "version": "0.0.0",
+  "description": "strobofm.herokuapp.com",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1000ch/strobofm.herokuapp.com.git"
+  },
+  "author": {
+    "name": "Shogo Sensui",
+    "email": "shogosensui@gmail.com",
+    "url": "https://github.com/1000ch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "helmet": "^3.12.0",
+    "stripe": "^5.8.0"
+  }
+}
