@@ -22,14 +22,24 @@ app.options('*', (req, res) => {
 });
 
 app.post('/donate', (req, res) => {
-  const { token } = req.body;
+  const {
+    amount,
+    currency,
+    source,
+    description
+  } = req.body;
 
   try {
-    stripe.tokens.retrieve(token, (error, token) => {
+    stripe.charges.create({
+      amount,
+      currency,
+      source,
+      description
+    }, (error, charge) => {
       if (error) {
         res.status(500).send(error);
       } else {
-        res.status(200).send({ token });
+        res.status(200).send({ charge });
       }
     });
   } catch (error) {
